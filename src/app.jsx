@@ -23,15 +23,19 @@ export default class App extends React.Component {
 
     /**
      * Starting polling.
+     * 
+     * @returns {void}
      */
     startPolling () {
         this.fetchData();
 
-        this.pollingTimer = setInterval(this.fetchData, 10*60*1000);
+        this.pollingTimer = setInterval(this.fetchData, 10 * 1000);
     }
 
     /**
      * Fetching data.
+     * 
+     * @returns {void}
      */
     fetchData () {
         axios
@@ -54,6 +58,8 @@ export default class App extends React.Component {
 
     /**
      * Render rates list.
+     * 
+     * @returns {JSX.Element} rates list
      */
     renderRatesList () {
         const { rates } = this.state;
